@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    <span>Amount</span>
+    <input type="text" size="10" id="money">
+    <span>From Cureny</span>
+    <select id="from">
+        <option value="23000">VN</option>
+        <option value="1">USD</option>
+        <option value="0.8">EU</option>
+    </select>
+    <span >to Cureny</span>
+    <select id="to">
+        <option value="23000">VN</option>
+        <option value="1">USD</option>
+        <option value="0.8">EU</option>
+    </select>
+    <input type="button" value="convert" onclick="showMessage()">
+</form>
+<div id="tien">xin chao</div>
+<script>
+    function showMessage() {
+        let money = document.getElementById("money").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let tien = money*to/from;
+        document.getElementById("tien").innerHTML = "So tien là" + tien;
+    }
+</script>
+</body>
+</html>
